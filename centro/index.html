@@ -158,7 +158,8 @@ h3 .en { font-size: 15px; font-weight: 400; margin-left: 4px; }
 
 /* El balcón, como foto impresa */
 .impresa {
-  position: relative; width: min(240px, 72%); margin: 14px 0 4px;
+  /* centrada en la hoja: compensa la columna del número del paso (36px + 12px) */
+  position: relative; left: -24px; width: min(260px, 78%); margin: 18px auto 8px;
   background: var(--crema); padding: 8px 8px 0;
   border-radius: 6px;
   box-shadow: 0 10px 24px rgba(31, 27, 24, 0.18), 0 1px 2px rgba(31, 27, 24, 0.2);
