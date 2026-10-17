@@ -302,6 +302,14 @@ h3 .en { font-size: 15px; font-weight: 400; margin-left: 4px; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* Fotos dentro de los pasos (candados) */
+.foto-paso { position: relative; margin-top: 12px; border-radius: 14px; overflow: hidden; background: var(--crema); }
+.foto-paso img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+.foto-paso figcaption { position: absolute; left: 8px; bottom: 8px; padding: 5px 9px; border-radius: 8px; background: var(--crema); font-size: 12.5px; font-weight: 700; box-shadow: 0 2px 8px rgba(31, 27, 24, 0.18); }
+.foto-sola { width: min(240px, 78%); }
+.fotos-par { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.fotos-par .foto-paso { margin-top: 12px; }
 </style>
 <style>
 /* Acento del edificio Carrera 15 #14-49 (201-204): azul eléctrico con brillo neón; el Centro usa escarlata. */
@@ -335,10 +343,10 @@ h3 .en { font-size: 15px; font-weight: 400; margin-left: 4px; }
     <h1>Bienvenidos <span class="en">Welcome</span></h1>
 
     <figure class="fachada">
-      <img src="../assets/hogareno-entrada.jpg" width="740" height="553" style="aspect-ratio: 740 / 553" alt="Fachada del edificio: a la izquierda la entrada de un parqueadero público, en el centro una agencia de viajes con vitrina y a su derecha una puerta negra.">
-      <span class="pin tuyo" style="left:10%; top:63%" aria-hidden="true">1</span>
-      <span class="pin" style="left:45%; top:62%" aria-hidden="true">2<span class="no"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 3l6 6M9 3 3 9"/></svg></span></span>
-      <span class="pin tuyo" style="left:68%; top:62%" aria-hidden="true">3</span>
+      <img src="../assets/edificio-fachada.jpg" width="1200" height="900" style="aspect-ratio: 4 / 3" alt="Fachada del edificio Carrera 15 #14-49: a la izquierda la entrada del parqueadero público, en el centro la agencia de viajes On Vacation y a su derecha la puerta negra del edificio.">
+      <span class="pin tuyo" style="left:9%; top:66%" aria-hidden="true">1</span>
+      <span class="pin" style="left:45%; top:64%" aria-hidden="true">2<span class="no"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 3l6 6M9 3 3 9"/></svg></span></span>
+      <span class="pin tuyo" style="left:68%; top:68%" aria-hidden="true">3</span>
     </figure>
 
     <ol class="leyenda">
@@ -366,9 +374,20 @@ h3 .en { font-size: 15px; font-weight: 400; margin-left: 4px; }
 
     <ol class="pasos">
       <li><div>En la <b>pared izquierda del parqueadero</b> está el candado principal. Ábrelo con su clave. <span class="en">The main lockbox is on the left wall of the parking entrance.</span></div></li>
-      <li><div>Toma <b>solo UNA llave: la de color rosa</b> 🩷. Es la de la puerta principal. <span class="en">Take only ONE key, the pink one: it opens the main door.</span></div></li>
+      <li><div>Toma <b>solo UNA llave: la de color rosa</b> 🩷. Es la de la puerta principal. <span class="en">Take only ONE key, the pink one: it opens the main door.</span>
+        <figure class="foto-paso foto-sola">
+          <img src="../assets/edificio-candado-principal.jpg" width="750" height="1000" loading="lazy" alt="Candado principal abierto, con cuatro llaves de colores; la rosa está abajo.">
+          <span class="pin tuyo" style="left:17%; top:57%" aria-hidden="true">🩷</span>
+          <figcaption>Candado principal · toma la rosa</figcaption>
+        </figure>
+      </div></li>
       <li><div>Abre la <b>puerta negra</b>, a la derecha de la agencia de viajes, y sube. <span class="en">Open the black door, right of the travel agency, and go upstairs.</span></div></li>
-      <li><div>Arriba está el <b>segundo candado</b>: guarda la llave de tu <b>apartamento 203</b>. <span class="en">Upstairs, the second lockbox holds the key to apartment 203.</span></div></li>
+      <li><div>Arriba está el <b>segundo candado</b>: guarda la llave de tu <b>apartamento 203</b>. <span class="en">Upstairs, the second lockbox holds the key to apartment 203.</span>
+        <div class="fotos-par">
+          <figure class="foto-paso"><img src="../assets/edificio-candado-apto.jpg" width="710" height="1000" loading="lazy" alt="Candado gris con clave junto a la puerta del apartamento."><figcaption>Así se ve</figcaption></figure>
+          <figure class="foto-paso"><img src="../assets/edificio-candado-apto-abierto.jpg" width="679" height="1000" loading="lazy" alt="El mismo candado abierto: adentro está la llave del apartamento."><figcaption>Adentro, tu llave</figcaption></figure>
+        </div>
+      </div></li>
     </ol>
 
     <div class="aviso">
