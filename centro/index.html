@@ -232,6 +232,12 @@ h3 .en { font-size: 15px; font-weight: 400; margin-left: 4px; }
 
 .pie { padding: 32px 20px 12px; text-align: center; color: var(--suave); font-size: 15px; }
 .pie b { display: block; font-size: 18px; font-weight: 800; color: var(--tinta); margin-bottom: 4px; }
+.pie .boton { margin: 16px auto 14px; max-width: 360px; }
+.boton.tinta { background: var(--tinta); color: var(--crema); }
+.boton.tinta:hover { background: color-mix(in srgb, var(--tinta) 86%, white); }
+.boton .num { font-weight: 400; opacity: 0.8; margin-left: 2px; font-variant-numeric: tabular-nums; }
+.ficha dd a { text-decoration: none; }
+.ficha dd a:hover { text-decoration: underline; }
 .pie .en { display: block; }
 
 /* El llavero */
@@ -325,6 +331,7 @@ h3 .en { font-size: 15px; font-weight: 400; margin-left: 4px; }
 
     <dl class="ficha">
       <div class="fila"><dt>Dirección <span class="en">Address</span></dt><dd>Calle 12 #15-28<small>2.º piso · Santa Rosa de Cabal</small></dd></div>
+      <div class="fila"><dt>WhatsApp <span class="en">Host</span></dt><dd><a href="https://wa.me/573108439768?text=Hola%20Felipe%2C%20soy%20hu%C3%A9sped%20del%20apartamento%20Centro%20%C2%B7%20Balc%C3%B3n." target="_blank" rel="noopener">310 843 9768</a><small>Felipe, tu anfitrión</small></dd></div>
     </dl>
     <a class="boton rojo" href="https://maps.app.goo.gl/EgFru2hNdqv8cpLF8" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21Z"/><circle cx="12" cy="10" r="2.4"/></svg>
@@ -343,7 +350,7 @@ h3 .en { font-size: 15px; font-weight: 400; margin-left: 4px; }
       <div class="camino">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19.5c.8-3.2 3-5 5.5-5s4.7 1.8 5.5 5"/><path d="M16 11.5l2 2 3.5-4"/></svg>
         <h3>Te recibimos</h3>
-        <p>Escríbenos por Airbnb tu hora aproximada de llegada y te esperamos en la puerta.</p>
+        <p>Escríbenos por <a href="https://wa.me/573108439768?text=Hola%20Felipe%2C%20soy%20hu%C3%A9sped%20del%20apartamento%20Centro%20%C2%B7%20Balc%C3%B3n." target="_blank" rel="noopener">WhatsApp</a> o Airbnb tu hora aproximada de llegada y te esperamos en la puerta.</p>
         <span class="en">Send us your arrival time on Airbnb and we'll meet you.</span>
       </div>
       <div class="camino">
@@ -442,8 +449,9 @@ h3 .en { font-size: 15px; font-weight: 400; margin-left: 4px; }
 
   <footer class="pie">
     <b>¿Alguna duda?</b>
-    Escríbenos por Airbnb a cualquier hora. ¡Que disfrutes Santa Rosa!
-    <span class="en">Message us on Airbnb anytime. Enjoy Santa Rosa!</span>
+    Escríbenos a cualquier hora. ¡Que disfrutes Santa Rosa!
+    <span class="en">Message us anytime. Enjoy Santa Rosa!</span>
+    <a class="boton tinta" href="https://wa.me/573108439768?text=Hola%20Felipe%2C%20soy%20hu%C3%A9sped%20del%20apartamento%20Centro%20%C2%B7%20Balc%C3%B3n." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.4 7.4L3.5 20.5l1.6-4.4A8.4 8.4 0 1 1 20.5 11.6Z"/><path d="M9 8.6c0 3.4 2.9 6.4 6.4 6.4l1-1.6-2-1-1 .9a4.6 4.6 0 0 1-2.7-2.7l.9-1-1-2Z"/></svg> WhatsApp <span class="num">310 843 9768</span></a>
   </footer>
 </div>
 
