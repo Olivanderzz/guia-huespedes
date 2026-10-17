@@ -109,7 +109,7 @@ b, strong { font-weight: 700; }
 .ficha .fila + .fila { border-top: 1px solid var(--linea); }
 .ficha dt { font-size: 14px; color: var(--suave); }
 .ficha dt .en { display: block; font-size: 13px; }
-.ficha dd { font-weight: 700; text-align: right; font-variant-numeric: tabular-nums; }
+.ficha dd { font-weight: 700; text-align: right; }
 .ficha dd.grande { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; }
 .ficha dd small { display: block; font-size: 13px; font-weight: 400; color: var(--suave); font-variant-numeric: normal; }
 
@@ -310,6 +310,22 @@ h3 .en { font-size: 15px; font-weight: 400; margin-left: 4px; }
 .foto-sola { width: min(240px, 78%); }
 .fotos-par { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .fotos-par .foto-paso { margin-top: 12px; }
+
+/* Contactos: domicilios y conductores */
+.contactos { list-style: none; background: var(--crema); border-radius: var(--radio); padding: 4px 18px; margin-top: 10px; }
+.contactos li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 0; }
+.contactos li + li { border-top: 1px solid var(--linea); }
+.contactos b { display: block; font-weight: 800; }
+.contactos .det { font-size: 14px; color: var(--suave); }
+.contactos .det .en { display: block; font-size: 13px; }
+.contactos .acciones { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+.pastilla { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 14px; border-radius: 999px; background: var(--escarlata); color: var(--crema); font-size: 14px; font-weight: 700; text-decoration: none; white-space: nowrap; transition: background-color 0.2s; }
+.pastilla:hover { background: var(--escarlata-2); }
+.pastilla.clara { background: var(--beige-2); color: var(--tinta); }
+.pastilla.clara:hover { background: var(--beige); }
+.pastilla svg { width: 17px; height: 17px; }
+.ficha dd a.mapa { display: inline-flex; align-items: center; gap: 4px; color: var(--escarlata); text-decoration: none; font-size: 13px; font-weight: 700; margin-top: 2px; }
+.ficha dd a.mapa svg { width: 14px; height: 14px; }
 </style>
 <style>
 /* Acento del edificio Carrera 15 #14-49 (201-204): azul eléctrico con brillo neón; el Centro usa escarlata. */
@@ -403,6 +419,7 @@ h3 .en { font-size: 15px; font-weight: 400; margin-left: 4px; }
       <div class="fila"><dt>Entrar antes o salir tarde <span class="en">Early in / late out</span></dt><dd>50.000 COP<small>según disponibilidad, avísanos con tiempo</small></dd></div>
       <div class="fila"><dt>Guardar maletas <span class="en">Luggage storage</span></dt><dd>Gratis<small>coordínalo con nosotros</small></dd></div>
       <div class="fila"><dt>Parqueadero <span class="en">Parking</span></dt><dd>Justo al lado<small>di que vienes al apartamento de Airbnb para el convenio · 12 o 24 h · 6 am–10 pm</small></dd></div>
+      <div class="fila"><dt>Parqueadero 24&nbsp;h <span class="en">24&nbsp;h parking</span></dt><dd>Las Flores · a una cuadra<small>abierto las 24 horas</small><a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Parqueadero%20Las%20Flores%20Santa%20Rosa%20de%20Cabal" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21Z"/><circle cx="12" cy="10" r="2.4"/></svg> Ver en el mapa</a></dd></div>
     </dl>
     <p class="nota">El parqueadero no es nuestro: lo recomendamos por cercanía y confianza.
       <span class="en">The parking lot isn't ours; we recommend it for its location and rates.</span></p>
@@ -446,6 +463,25 @@ h3 .en { font-size: 15px; font-weight: 400; margin-left: 4px; }
       <li><span class="que">Pérdida de llave <span class="en">Lost key</span></span><span class="cuanto alerta">60.000 COP</span></li>
       <li><span class="que">Al irte, deja la cocina sin restos de comida ni platos sucios ✨ <span class="en">Leave the kitchen clean, no dirty dishes</span></span></li>
     </ul>
+  
+    <h3>Pide a domicilio <span class="en">Food delivery</span></h3>
+    <p>Las apps de domicilios de Santa Rosa: restaurantes, mercado y más, directo a tu puerta.
+      <span class="en">Local delivery apps: restaurants, groceries and more.</span></p>
+    <ul class="contactos">
+      <li><span><b>Domii</b><span class="det">La app de domicilios santarrosana <span class="en">Local delivery app</span></span></span>
+        <span class="acciones"><a class="pastilla" href="https://domii.com.co/googleplay.html" target="_blank" rel="noopener">Android</a><a class="pastilla clara" href="https://domii.com.co/appstore.html" target="_blank" rel="noopener">iPhone</a></span></li>
+      <li><span><b>Domicilios Express</b><span class="det">Búscala en tu tienda de apps <span class="en">Search it in your app store</span></span></span></li>
+    </ul>
+
+    <h3>Conductores de confianza <span class="en">Trusted drivers</span></h3>
+    <p>Te recogen y te llevan a los termales o a donde quieras. La tarifa la acuerdas directamente con ellos.
+      <span class="en">They pick you up and take you to the hot springs or anywhere; agree the fare with them.</span></p>
+    <ul class="contactos">
+      <li><span><b>Camilo Durán</b><span class="det">302 812 7097</span></span>
+        <span class="acciones"><a class="pastilla" href="https://wa.me/573028127097?text=Hola%20Camilo%2C%20soy%20hu%C3%A9sped%20de%20El%20Eje%20Homes%20(Felipe)%20y%20quiero%20cotizar%20un%20traslado." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.4 7.4L3.5 20.5l1.6-4.4A8.4 8.4 0 1 1 20.5 11.6Z"/><path d="M9 8.6c0 3.4 2.9 6.4 6.4 6.4l1-1.6-2-1-1 .9a4.6 4.6 0 0 1-2.7-2.7l.9-1-1-2Z"/></svg> WhatsApp</a></span></li>
+      <li><span><b>Fernando Yara</b><span class="det">312 827 3347</span></span>
+        <span class="acciones"><a class="pastilla" href="https://wa.me/573128273347?text=Hola%20Fernando%2C%20soy%20hu%C3%A9sped%20de%20El%20Eje%20Homes%20(Felipe)%20y%20quiero%20cotizar%20un%20traslado." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.4 7.4L3.5 20.5l1.6-4.4A8.4 8.4 0 1 1 20.5 11.6Z"/><path d="M9 8.6c0 3.4 2.9 6.4 6.4 6.4l1-1.6-2-1-1 .9a4.6 4.6 0 0 1-2.7-2.7l.9-1-1-2Z"/></svg> WhatsApp</a></span></li>
+    </ul>
   </section>
 
   <section id="salida" aria-labelledby="t-salida">
@@ -461,7 +497,6 @@ h3 .en { font-size: 15px; font-weight: 400; margin-left: 4px; }
 
     <h3>Antes de irte <span class="en">Before you go</span></h3>
     <ul class="lista">
-      <li><span class="que"><b>Conductores de confianza</b> a los termales y otras actividades: te pasamos el contacto. <span class="en">Trusted drivers to the hot springs and tours.</span></span></li>
       <li><span class="que"><b>Senderismo y avistamiento de aves</b>: pregúntanos por planes. <span class="en">Ask us about hiking and birdwatching.</span></span></li>
       <li><span class="que"><b>Chorizos santarrosanos auténticos</b> para llevar o para la casa. Pregúntanos. <span class="en">Authentic Santa Rosa chorizos to take home.</span></span></li>
     </ul>
