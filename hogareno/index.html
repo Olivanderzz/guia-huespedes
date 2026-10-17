@@ -303,6 +303,24 @@ h3 .en { font-size: 15px; font-weight: 400; margin-left: 4px; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 </style>
+<style>
+/* Acento propio del Hogareño: azul eléctrico con brillo neón (el Centro usa escarlata). */
+:root {
+  --escarlata: #1E5BFF;
+  --escarlata-2: #1748D6;
+  --escarlata-suave: rgba(30, 91, 255, 0.09);
+  --neon: 0 0 0 1px rgba(30, 91, 255, 0.45), 0 0 18px rgba(30, 91, 255, 0.55), 0 0 42px rgba(30, 91, 255, 0.28);
+  --neon-fuerte: 0 0 0 1px rgba(30, 91, 255, 0.6), 0 0 24px rgba(30, 91, 255, 0.75), 0 0 56px rgba(30, 91, 255, 0.38);
+}
+.boton.rojo, .copiar.listo { box-shadow: var(--neon); text-shadow: 0 0 10px rgba(255, 255, 255, 0.45); }
+.boton.rojo:hover, .copiar.listo:hover { box-shadow: var(--neon-fuerte); }
+.pin.tuyo { box-shadow: 0 0 0 3px var(--crema), 0 0 22px rgba(30, 91, 255, 0.85), 0 6px 14px rgba(0, 0, 0, 0.3); }
+.leyenda .n.tuyo { box-shadow: 0 0 10px rgba(30, 91, 255, 0.7); }
+.tag[aria-current="true"] { filter: drop-shadow(0 0 8px rgba(30, 91, 255, 0.8)) drop-shadow(0 0 18px rgba(30, 91, 255, 0.45)); }
+.pueblo { box-shadow: var(--neon); }
+.pueblo:hover { box-shadow: var(--neon-fuerte); }
+.boton.tinta:hover { box-shadow: 0 0 0 1px rgba(30, 91, 255, 0.5), 0 0 18px rgba(30, 91, 255, 0.45); }
+</style>
 </head>
 <body>
 <div class="hoja">
