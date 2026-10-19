@@ -342,7 +342,12 @@ h3 .en { font-size: 15px; font-weight: 400; margin-left: 4px; }
 .pueblo { box-shadow: var(--neon); }
 .pueblo:hover { box-shadow: var(--neon-fuerte); }
 .boton.tinta:hover { box-shadow: 0 0 0 1px rgba(160, 104, 236, 0.55), 0 0 18px rgba(160, 104, 236, 0.5); }
-/* Llegada sin foto (hasta tener la de la portería) */
+/* Rótulo sobre la foto del edificio */
+.fachada-alta .rotulo { position: absolute; left: 12px; top: 12px; display: grid; gap: 2px; padding: 10px 14px; border-radius: 14px; background: var(--escarlata); color: var(--crema); box-shadow: var(--neon); }
+.fachada-alta .rotulo span { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.9; }
+.fachada-alta .rotulo b { font-size: 20px; font-weight: 800; letter-spacing: -0.02em; }
+.pin.tuyo { box-shadow: 0 0 0 3px var(--crema), 0 0 22px rgba(160, 104, 236, 0.85), 0 6px 14px rgba(0, 0, 0, 0.3); }
+/* (sin uso) llegada sin foto */
 .llegada-sin-foto { display: grid; gap: 2px; padding: 22px 20px; border-radius: var(--radio); background: var(--escarlata); color: var(--crema); box-shadow: var(--neon); }
 .llegada-sin-foto .edificio { font-size: 14px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.9; }
 .llegada-sin-foto .piso { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; }
@@ -362,11 +367,11 @@ h3 .en { font-size: 15px; font-weight: 400; margin-left: 4px; }
   <div class="portada">
     <h1>Bienvenidos <span class="en">Welcome</span></h1>
 
-    <div class="llegada-sin-foto">
-      <span class="edificio">Amazilia Free Living</span>
-      <span class="piso">Apartamento <b>702</b> · piso 7</span>
-      <span class="en">Apartment 702, 7th floor</span>
-    </div>
+    <figure class="fachada fachada-alta">
+      <img src="../assets/amazilia-fachada.jpg" width="1000" height="1061" style="aspect-ratio: 1 / 1; object-position: 50% 100%" alt="Edificio Amazilia Free Living: torre de siete pisos con balcones; a la derecha, el parqueadero cubierto.">
+      <span class="pin tuyo" style="left:82%; top:82%" aria-hidden="true">P</span>
+      <figcaption class="rotulo"><span>Amazilia Free Living</span><b>Apto 702 · piso 7</b></figcaption>
+    </figure>
 
     <dl class="ficha">
       <div class="fila"><dt>Dirección <span class="en">Address</span></dt><dd>Carrera 3 #14-08<small>Amazilia Free Living · Santa Rosa de Cabal</small></dd></div>
@@ -398,7 +403,7 @@ h3 .en { font-size: 15px; font-weight: 400; margin-left: 4px; }
     </div>
 
     <h3>¿Llegas tarde? <span class="en">Arriving late?</span></h3>
-    <p>Si el portero ya se fue, entra por el <b>parqueadero de Amazilia</b>: en la parte de atrás hay una puerta con cerradura digital. Digita el código que te enviamos y presiona el <b>botón verde</b>.
+    <p>Si el portero ya se fue, entra por el <b>parqueadero de Amazilia</b> (la <b>P</b> en la foto de arriba): en la parte de atrás hay una puerta con cerradura digital. Digita el código que te enviamos y presiona el <b>botón verde</b>.
       <span class="en">If the doorman has left, use the back door in the Amazilia parking lot: enter the code we sent you and press the green button.</span></p>
 
     <h3>Horarios y servicios <span class="en">Hours & services</span></h3>
