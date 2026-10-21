@@ -328,22 +328,29 @@ h3 .en { font-size: 15px; font-weight: 400; margin-left: 4px; }
 .ficha dd a.mapa svg { width: 14px; height: 14px; }
 </style>
 <style>
-/* Acento del edificio Carrera 15 #14-49 (201-204): azul eléctrico con brillo neón; el Centro usa escarlata. */
+/* Acento del apartamento 204: el color de su llave en el candado principal (201 verde, 202 azul, 203 morada, 204 rosa). */
 :root {
-  --escarlata: #1E5BFF;
-  --escarlata-2: #1748D6;
-  --escarlata-suave: rgba(30, 91, 255, 0.09);
-  --neon: 0 0 0 1px rgba(30, 91, 255, 0.45), 0 0 18px rgba(30, 91, 255, 0.55), 0 0 42px rgba(30, 91, 255, 0.28);
-  --neon-fuerte: 0 0 0 1px rgba(30, 91, 255, 0.6), 0 0 24px rgba(30, 91, 255, 0.75), 0 0 56px rgba(30, 91, 255, 0.38);
+  --escarlata: #D6106F;
+  --escarlata-2: #B20C5C;
+  --escarlata-suave: rgba(214, 16, 111, 0.1);
+  --neon: 0 0 0 1px rgba(214, 16, 111, 0.45), 0 0 18px rgba(214, 16, 111, 0.55), 0 0 42px rgba(214, 16, 111, 0.28);
+  --neon-fuerte: 0 0 0 1px rgba(214, 16, 111, 0.6), 0 0 24px rgba(214, 16, 111, 0.75), 0 0 56px rgba(214, 16, 111, 0.38);
 }
 .boton.rojo, .copiar.listo { box-shadow: var(--neon); text-shadow: 0 0 10px rgba(255, 255, 255, 0.45); }
 .boton.rojo:hover, .copiar.listo:hover { box-shadow: var(--neon-fuerte); }
-.pin.tuyo { box-shadow: 0 0 0 3px var(--crema), 0 0 22px rgba(30, 91, 255, 0.85), 0 6px 14px rgba(0, 0, 0, 0.3); }
-.leyenda .n.tuyo { box-shadow: 0 0 10px rgba(30, 91, 255, 0.7); }
-.tag[aria-current="true"] { filter: drop-shadow(0 0 8px rgba(30, 91, 255, 0.8)) drop-shadow(0 0 18px rgba(30, 91, 255, 0.45)); }
+.pin.tuyo { box-shadow: 0 0 0 3px var(--crema), 0 0 22px rgba(214, 16, 111, 0.85), 0 6px 14px rgba(0, 0, 0, 0.3); }
+.leyenda .n.tuyo { box-shadow: 0 0 10px rgba(214, 16, 111, 0.7); }
+.tag[aria-current="true"] { filter: drop-shadow(0 0 8px rgba(214, 16, 111, 0.8)) drop-shadow(0 0 18px rgba(214, 16, 111, 0.45)); }
 .pueblo { box-shadow: var(--neon); }
 .pueblo:hover { box-shadow: var(--neon-fuerte); }
-.boton.tinta:hover { box-shadow: 0 0 0 1px rgba(30, 91, 255, 0.5), 0 0 18px rgba(30, 91, 255, 0.45); }
+.boton.tinta:hover { box-shadow: 0 0 0 1px rgba(214, 16, 111, 0.5), 0 0 18px rgba(214, 16, 111, 0.45); }
+/* Tu apartamento: número grande y color de la llave */
+.tu-apto { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-bottom: 14px; padding: 14px 18px; background: var(--crema); border-radius: var(--radio); box-shadow: inset 4px 0 0 var(--escarlata); }
+.tu-apto .rotulo { font-size: 14px; color: var(--suave); line-height: 1.3; white-space: nowrap; }
+.tu-apto .rotulo .en { display: block; font-size: 13px; }
+.tu-apto b { font-size: 36px; font-weight: 900; letter-spacing: -0.04em; line-height: 1; color: var(--escarlata); }
+@media (max-width: 380px) { .tu-apto b { font-size: 32px; } .tu-apto .llave { font-size: 13px; } }
+.tu-apto .llave { margin-left: auto; padding: 6px 10px; border-radius: 999px; background: var(--escarlata-suave); color: var(--escarlata); font-size: 14px; font-weight: 800; white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -357,6 +364,7 @@ h3 .en { font-size: 15px; font-weight: 400; margin-left: 4px; }
   <div id="llegar">
   <div class="portada">
     <h1>Bienvenidos <span class="en">Welcome</span></h1>
+    <div class="tu-apto"><span class="rotulo">Tu apartamento <span class="en">Your apartment</span></span><b>204</b><span class="llave">🩷 Llave rosa</span></div>
 
     <figure class="fachada">
       <img src="../assets/edificio-fachada.jpg" width="1200" height="900" style="aspect-ratio: 4 / 3" alt="Fachada del edificio Carrera 15 #14-49: a la izquierda la entrada del parqueadero público, en el centro la agencia de viajes On Vacation y a su derecha la puerta negra del edificio.">
@@ -390,11 +398,11 @@ h3 .en { font-size: 15px; font-weight: 400; margin-left: 4px; }
 
     <ol class="pasos">
       <li><div>En la <b>pared izquierda del parqueadero</b> está el candado principal. Ábrelo con su clave. <span class="en">The main lockbox is on the left wall of the parking entrance.</span></div></li>
-      <li><div>Toma <b>solo UNA llave: la de color rosa</b> 🩷. Es la de la puerta principal. <span class="en">Take only ONE key, the pink one: it opens the main door.</span>
+      <li><div>Toma <b>solo UNA llave: la de color rosa</b>&nbsp;🩷. Es la de la puerta principal. <span class="en">Take only ONE key, the pink one: it opens the main door.</span>
         <figure class="foto-paso foto-sola">
-          <img src="../assets/edificio-candado-principal.jpg" width="750" height="1000" loading="lazy" alt="Candado principal abierto, con cuatro llaves de colores; la rosa está abajo.">
-          <span class="pin tuyo" style="left:17%; top:57%" aria-hidden="true">🩷</span>
-          <figcaption>Candado principal · toma la rosa</figcaption>
+          <img src="../assets/edificio-candado-principal.jpg" width="750" height="1000" loading="lazy" alt="Candado principal abierto, con cuatro llaves de colores; la rosa es la de abajo.">
+          <span class="pin tuyo" style="left:17%; top:57.0%" aria-hidden="true">🩷</span>
+          <figcaption>Toma la llave rosa</figcaption>
         </figure>
       </div></li>
       <li><div>Abre la <b>puerta negra</b>, a la derecha de la agencia de viajes, y sube. <span class="en">Open the black door, right of the travel agency, and go upstairs.</span></div></li>
