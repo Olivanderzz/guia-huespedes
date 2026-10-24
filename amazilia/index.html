@@ -353,6 +353,8 @@ h3 .en { font-size: 15px; font-weight: 400; margin-left: 4px; }
 .llegada-sin-foto .piso { font-size: 26px; font-weight: 800; letter-spacing: -0.02em; }
 .llegada-sin-foto .piso b { font-weight: 900; }
 .llegada-sin-foto .en { color: rgba(251, 247, 240, 0.85); font-size: 14px; }
+.aviso-parqueo { margin-top: 14px; }
+.no-adentro { color: var(--escarlata); font-weight: 700; }
 </style>
 </head>
 <body>
@@ -368,7 +370,7 @@ h3 .en { font-size: 15px; font-weight: 400; margin-left: 4px; }
     <h1>Bienvenidos <span class="en">Welcome</span></h1>
 
     <figure class="fachada fachada-alta">
-      <img src="../assets/amazilia-fachada.jpg" width="1000" height="1061" style="aspect-ratio: 1 / 1; object-position: 50% 100%" alt="Edificio Amazilia Free Living: torre de siete pisos con balcones; a la derecha, el parqueadero cubierto.">
+      <img src="../assets/amazilia-fachada.jpg" width="1000" height="1061" style="aspect-ratio: 1 / 1; object-position: 50% 100%" alt="Edificio Amazilia Free Living: torre de siete pisos con balcones; a la derecha, el parqueadero de residentes, por donde se entra a pie si llegas tarde.">
       <span class="pin tuyo" style="left:82%; top:82%" aria-hidden="true">P</span>
       <figcaption class="rotulo"><span>Amazilia Free Living</span><b>Apto 702 · piso 7</b></figcaption>
     </figure>
@@ -381,6 +383,12 @@ h3 .en { font-size: 15px; font-weight: 400; margin-left: 4px; }
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21Z"/><circle cx="12" cy="10" r="2.4"/></svg>
       Abrir en Google Maps
     </a>
+
+    <div class="aviso aviso-parqueo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 16.5V12l1.8-4.6A2 2 0 0 1 8.7 6h6.6a2 2 0 0 1 1.9 1.4L19 12v4.5"/><path d="M4 12h16v4.5H4z"/><circle cx="7.5" cy="16.5" r="1.6"/><circle cx="16.5" cy="16.5" r="1.6"/></svg>
+      <div><b>¿Vienes en carro? Parquea en la calle, frente al conjunto.</b> El parqueadero de adentro es <b>solo para residentes</b>: no dejes tu carro ahí, aunque esté abierto o veas puestos libres. La administración multa, y la multa la paga el huésped.
+        <span class="en">Coming by car? Park on the street in front of the building. The inside parking lot is for residents only, even if it's open or has free spots: the building fines, and the guest pays the fine.</span></div>
+    </div>
 
     <p class="intro">Aquí tienes todo para llegar, entrar y sentirte en casa en Amazilia.
       <span class="en">Everything you need to arrive, get in and feel at home.</span></p>
@@ -403,8 +411,8 @@ h3 .en { font-size: 15px; font-weight: 400; margin-left: 4px; }
     </div>
 
     <h3>¿Llegas tarde? <span class="en">Arriving late?</span></h3>
-    <p>Si el portero ya se fue, entra por el <b>parqueadero de Amazilia</b> (la <b>P</b> en la foto de arriba): en la parte de atrás hay una puerta con cerradura digital. Digita el código que te enviamos y presiona el <b>botón verde</b>.
-      <span class="en">If the doorman has left, use the back door in the Amazilia parking lot: enter the code we sent you and press the green button.</span></p>
+    <p>Si el portero ya se fue, entra <b>caminando</b> por el parqueadero de Amazilia (la <b>P</b> en la foto de arriba): en la parte de atrás hay una puerta con cerradura digital. Digita el código que te enviamos y presiona el <b>botón verde</b>. Tu carro se queda <b>afuera, en la calle</b>.
+      <span class="en">If the doorman has left, walk through the Amazilia parking lot to the back door: enter the code we sent you and press the green button. Your car stays outside, on the street.</span></p>
 
     <h3>Horarios y servicios <span class="en">Hours & services</span></h3>
     <dl class="ficha">
@@ -412,7 +420,7 @@ h3 .en { font-size: 15px; font-weight: 400; margin-left: 4px; }
       <div class="fila"><dt>Check-out <span class="en">until</span></dt><dd class="grande">11:00 AM</dd></div>
       <div class="fila"><dt>Entrar antes o salir tarde <span class="en">Early in / late out</span></dt><dd>50.000 COP<small>según disponibilidad, avísanos con tiempo</small></dd></div>
       <div class="fila"><dt>Guardar maletas <span class="en">Luggage storage</span></dt><dd>Gratis<small>coordínalo con nosotros</small></dd></div>
-      <div class="fila"><dt>Parqueadero <span class="en">Parking</span></dt><dd>En la calle, frente al conjunto<small>zona tranquila · vía pública, no cubierto</small></dd></div>
+      <div class="fila"><dt>Parqueadero <span class="en">Parking</span></dt><dd>En la calle, frente al conjunto<small>vía pública, no cubierto · <b class="no-adentro">adentro no: es de residentes</b></small></dd></div>
     </dl>
   </section>
   </div>
@@ -444,6 +452,7 @@ h3 .en { font-size: 15px; font-weight: 400; margin-left: 4px; }
     <ul class="lista">
       <li><span class="que">Las toallas son solo para el apartamento: no las lleves a los termales <span class="en">Towels stay inside, not for the hot springs</span></span><span class="cuanto alerta">40.000 COP</span></li>
       <li><span class="que">No fumar dentro de las instalaciones <span class="en">No smoking</span></span><span class="cuanto alerta">Multa 40.000 COP</span></li>
+      <li><span class="que">No parquear dentro del conjunto: es solo para residentes <span class="en">No parking inside: residents only</span></span><span class="cuanto alerta">Multa a tu cargo</span></li>
       <li><span class="que">Al irte, deja la cocina sin restos de comida ni platos sucios ✨ <span class="en">Leave the kitchen clean, no dirty dishes</span></span></li>
     </ul>
 
